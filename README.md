@@ -9,21 +9,29 @@ The game focuses on tension, atmosphere, and simple mechanics to create a horror
 GAME OBJECTIVE
 
 Explore the environment
+
 Avoid Slender Man
+
 Reach the Light beam to escape and win
 
 KEY FEATURES
 
 Light beam escape point
+
 Environmental obstacle
+
 Static warning effect
+
 Jump scare effect
 
 TECH STACK
 
 3D Framework: A-Frame
+
 Programming Language: JavaScript
+
 Build Tool: Vite
+
 Web Technologies: HTML, CSS
 
 INSTALLATION & SETUP GUIDE
