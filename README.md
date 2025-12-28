@@ -7,23 +7,27 @@ from Slender Man by navigating the environment and reaching a light beam.
 The game focuses on tension, atmosphere, and simple mechanics to create a horror experience.
 
 GAME OBJECTIVE
+
 Explore the environment
 Avoid Slender Man
 Reach the Light beam to escape and win
 
 KEY FEATURES
+
 Light beam escape point
 Environmental obstacle
 Static warning effect
 Jump scare effect
 
 TECH STACK
+
 3D Framework: A-Frame
 Programming Language: JavaScript
 Build Tool: Vite
 Web Technologies: HTML, CSS
 
 INSTALLATION & SETUP GUIDE
+
 STEP 1: Install Node.js
 Download and install Node.js from the official website
 Make sure npm is included during installation
