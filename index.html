@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slender: The Escape (v6.8 Final Path)</title>
+    <script type="module" crossorigin src="/ITE18-Final-Project/assets/index-DyLL81fi.js"></script>
+    <link rel="stylesheet" crossorigin href="/ITE18-Final-Project/assets/index-CYucPZnM.css">
+  </head>
+  <body>
+    <div id="loading-screen">
+      <div class="loader"></div>
+      <h2>LOADING FOREST...</h2>
+    </div>
+
+    <div id="jumpscare-overlay"></div>
+    <div id="win-popup">
+      <div id="win-content">
+        <h1 id="win-title">YOU ESCAPED!</h1>
+        <button id="btn-restart" class="win-btn">RESTART GAME</button>
+        <button id="btn-exit" class="win-btn">EXIT GAME</button>
+      </div>
+    </div>
+    
+    <div id="calib-gui">
+      <div style="text-align: center; margin-bottom: 10px">OPTIONS</div>
+      <button id="btn-toggle-lights">TOGGLE LIGHTS</button>
+      <div style="border-top: 1px solid white; margin: 10px 0"></div>
+
+
+      <button id="btn-start">START GAME</button>
+    </div>
+
+    <div id="ui-layer">
+      <div id="vignette"></div>
+      <div id="static-overlay"></div>
+      <div id="hud">
+        <p>FIND THE BEAM OF LIGHT</p>
+        <p id="game-over" style="display: none; color: red; font-size: 40px">GAME OVER</p>
+      </div>
+    </div>
+
+    <a-scene fog="type: exponential; color: #000; density: 0.15">
+      <a-assets>
+        <audio id="sfx-static" src="/sounds/static.mp3"></audio>
+        <audio id="sfx-jumpscare" src="/sounds/jumpscare.mp3"></audio>
+        <img id="grass-tex" src="/ITE18-Final-Project/textures/grass.jpg" />
+      </a-assets>
+
+      <a-entity game-manager></a-entity>
+
+      <a-entity id="dev-ambient" light="type: ambient; intensity: 1.5; color: #FFF"></a-entity>
+
+      <a-plane rotation="-90 0 0" width="800" height="800" material="src: #grass-tex; repeat: 200 200; roughness: 1; metalness: 0" shadow="receive: false"></a-plane>
+      <a-sky color="#050505"></a-sky>
+
+      <a-entity id="player" position="0 1.6 40" movement-controls="speed: 0.25">
+        <a-entity camera look-controls>
+          <a-entity light="type: spot; angle: 45; penumbra: 0.6; intensity: 4; distance: 80; castShadow: true" position="0.5 -0.5 0"></a-entity>
+        </a-entity>
+      </a-entity>
+
+      <a-entity id="enemy" slender-ai gltf-model="/models/slender_man.glb" scale="2 2 2" position="0 0 5"></a-entity>
+    </a-scene>
+
+  </body>
+</html>
